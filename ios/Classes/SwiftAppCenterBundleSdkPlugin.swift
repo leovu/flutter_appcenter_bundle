@@ -7,7 +7,7 @@ import AppCenterCrashes
 import AppCenterDistribute
 public class SwiftAppCenterBundleSdkPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "it.sarni.flutter_flutter_appcenter", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "it.sarni.flutter_flutter_appcenter_bundle", binaryMessenger: registrar.messenger())
     let instance = SwiftAppCenterBundleSdkPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }

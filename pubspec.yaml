@@ -1,7 +1,7 @@
-name: flutter_appcenter
+name: flutter_appcenter_bundle
 description: A Bundle for App Center SDK, with this you can use AppCenter Analytics, AppCenter Crash and AppCenter Distribute
 version: 0.0.2
-homepage: https://github.com/vincenzosarnataro/flutter_appcenter
+homepage: https://github.com/vincenzosarnataro/flutter_appcenter_bundle
 publish_to: https://pub.dev/
 
 environment:
@@ -28,7 +28,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: it.sarni.flutter_appcenter
+        package: it.sarni.flutter_appcenter_bundle
         pluginClass: AppCenterBundleSdkPlugin
       ios:
         pluginClass: AppCenterBundleSdkPlugin

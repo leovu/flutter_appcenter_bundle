@@ -1,4 +1,4 @@
-import 'package:flutter_appcenter/flutter_appcenter.dart';
+import 'package:flutter_appcenter/flutter_appcenter_bundle.dart';
 import 'package:flutter/material.dart';
 
 void main() {

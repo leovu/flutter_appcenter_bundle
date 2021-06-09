@@ -1,6 +1,6 @@
-# flutter_appcenter_example
+# flutter_appcenter_bundle_example
 
-Demonstrates how to use the flutter_appcenter plugin.
+Demonstrates how to use the flutter_appcenter_bundle plugin.
 
 ## Getting Started
 

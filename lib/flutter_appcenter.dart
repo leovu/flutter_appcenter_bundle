@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-final _methodChannelName = "it.sarni.flutter_flutter_appcenter";
+final _methodChannelName = "it.sarni.flutter_flutter_appcenter_bundle";
 final _methodChannel = MethodChannel(_methodChannelName);
 
 class AppCenter {

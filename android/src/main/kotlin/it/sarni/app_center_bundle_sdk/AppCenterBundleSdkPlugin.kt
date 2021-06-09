@@ -1,4 +1,4 @@
-package it.sarni.flutter_appcenter
+package it.sarni.flutter_appcenter_bundle
 
 import android.app.Application
 import android.util.Log
@@ -25,7 +25,7 @@ class AppCenterBundleSdkPlugin : FlutterPlugin, MethodCallHandler {
     var application: Application? = null
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "it.sarni.flutter_flutter_appcenter")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "it.sarni.flutter_flutter_appcenter_bundle")
         application = flutterPluginBinding.applicationContext as Application
         channel.setMethodCallHandler(this)
     }

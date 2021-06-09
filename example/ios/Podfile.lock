@@ -1,5 +1,5 @@
 PODS:
-  - flutter_appcenter (0.0.1):
+  - flutter_appcenter_bundle (0.0.1):
     - AppCenter
     - AppCenter/Distribute
     - Flutter
@@ -16,7 +16,7 @@ PODS:
   - Flutter (1.0.0)
 
 DEPENDENCIES:
-  - flutter_appcenter (from `.symlinks/plugins/flutter_appcenter/ios`)
+  - flutter_appcenter_bundle (from `.symlinks/plugins/flutter_appcenter_bundle/ios`)
   - Flutter (from `Flutter`)
 
 SPEC REPOS:
@@ -24,13 +24,13 @@ SPEC REPOS:
     - AppCenter
 
 EXTERNAL SOURCES:
-  flutter_appcenter:
-    :path: ".symlinks/plugins/flutter_appcenter/ios"
+  flutter_appcenter_bundle:
+    :path: ".symlinks/plugins/flutter_appcenter_bundle/ios"
   Flutter:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  flutter_appcenter: b8470a1deba14e751819e9b6e4865dce9b18d280
+  flutter_appcenter_bundle: b8470a1deba14e751819e9b6e4865dce9b18d280
   AppCenter: 8832b158d17e54845c3b88a91076218f0b07174d
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
 

@@ -1,4 +1,4 @@
-group 'it.sarni.flutter_appcenter'
+group 'it.sarni.flutter_appcenter_bundle'
 version '1.0-SNAPSHOT'
 
 buildscript {
