@@ -14,10 +14,10 @@ A new flutter plugin project.
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
-  s.dependency 'AppCenter', '~> 4.3.1'
-  s.dependency 'AppCenter/Distribute', '~> 4.3.1'
+  s.dependency 'AppCenter'
+  s.dependency 'AppCenter/Distribute'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
+  s.platform = :ios, '9.0'
   s.static_framework = true
 
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
