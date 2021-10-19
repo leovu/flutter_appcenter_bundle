@@ -1,18 +1,18 @@
 PODS:
-  - AppCenter (3.2.0):
-    - AppCenter/Analytics (= 3.2.0)
-    - AppCenter/Crashes (= 3.2.0)
-  - AppCenter/Analytics (3.2.0):
+  - AppCenter (4.3.0):
+    - AppCenter/Analytics (= 4.3.0)
+    - AppCenter/Crashes (= 4.3.0)
+  - AppCenter/Analytics (4.3.0):
     - AppCenter/Core
-  - AppCenter/Core (3.2.0)
-  - AppCenter/Crashes (3.2.0):
+  - AppCenter/Core (4.3.0)
+  - AppCenter/Crashes (4.3.0):
     - AppCenter/Core
-  - AppCenter/Distribute (3.2.0):
+  - AppCenter/Distribute (4.3.0):
     - AppCenter/Core
   - Flutter (1.0.0)
   - flutter_appcenter_bundle (0.0.1):
-    - AppCenter (~> 3.2.0)
-    - AppCenter/Distribute (~> 3.2.0)
+    - AppCenter
+    - AppCenter/Distribute
     - Flutter
   - package_info (0.0.1):
     - Flutter
@@ -35,11 +35,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/package_info/ios"
 
 SPEC CHECKSUMS:
-  AppCenter: ca66175050d538b157959382dd43f1ab96cdab84
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_appcenter_bundle: bbf1dd726a7a090027c88201a62b83269a56f075
-  package_info: 48b108e75b8802c2d5e126f208ef540561c98aef
+  AppCenter: 883369ab78427b0561c688158d689dfe1f993ea9
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_appcenter_bundle: 2c033fca37c5c9404c952481820e65428db47a13
+  package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
 
-PODFILE CHECKSUM: 1d70c30602384d810fe07245fc37f78162e248e4
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.2

@@ -32,42 +32,41 @@ public class SwiftFlutterAppcenterBundlePlugin: NSObject, FlutterPlugin {
             let secret = args["secret"] as! String
             let usePrivateTrack = args["usePrivateTrack"] as! Bool
             if (usePrivateTrack) {
-                MSDistribute.updateTrack = .private
+                Distribute.updateTrack = .private
             }
-
-            MSAppCenter.start(secret, withServices:[
-                MSAnalytics.self,
-                MSCrashes.self,
-                MSDistribute.self,
+            AppCenter.start(withAppSecret: secret, services:[
+                Analytics.self,
+                Crashes.self,
+                Distribute.self,
             ])
         case "trackEvent":
             trackEvent(call: call, result: result)
             return
         case "isDistributeEnabled":
-            result(MSDistribute.isEnabled())
+            result(Distribute.enabled)
             return
         case "getInstallId":
-            result(MSAppCenter.installId().uuidString)
+            result(AppCenter.installId.uuidString)
             return
         case "configureDistribute":
-            MSDistribute.setEnabled(call.arguments as! Bool)
+            Distribute.enabled = call.arguments as! Bool
         case "configureDistributeDebug":
             result(nil)
             return
         case "disableAutomaticCheckForUpdate":
-            MSDistribute.disableAutomaticCheckForUpdate()
+            Distribute.disableAutomaticCheckForUpdate()
         case "checkForUpdate":
-            MSDistribute.checkForUpdate()
+            Distribute.checkForUpdate()
         case "isCrashesEnabled":
-            result(MSCrashes.isEnabled())
+            result(Crashes.enabled)
             return
         case "configureCrashes":
-            MSCrashes.setEnabled(call.arguments as! Bool)
+            Crashes.enabled = call.arguments as! Bool
         case "isAnalyticsEnabled":
-            result(MSAnalytics.isEnabled())
+            result(Analytics.enabled)
             return
         case "configureAnalytics":
-            MSAnalytics.setEnabled(call.arguments as! Bool)
+            Analytics.enabled = call.arguments as! Bool
         default:
             result(FlutterMethodNotImplemented);
             return
@@ -85,7 +84,7 @@ public class SwiftFlutterAppcenterBundlePlugin: NSObject, FlutterPlugin {
         let name = args["name"] as? String
         let properties = args["properties"] as? [String: String]
         if(name != nil) {
-            MSAnalytics.trackEvent(name!, withProperties: properties)
+            Analytics.trackEvent(name!, withProperties: properties)
         }
         
         result(nil)

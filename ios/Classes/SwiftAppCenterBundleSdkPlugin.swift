@@ -1,7 +1,6 @@
 import Flutter
 import UIKit
 import AppCenter
-
 import AppCenterAnalytics
 import AppCenterCrashes
 import AppCenterDistribute
