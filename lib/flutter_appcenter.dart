@@ -4,13 +4,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-final _methodChannelName = "it.sarni.flutter_flutter_appcenter_bundle";
+final _methodChannelName = "it.wao.flutter_flutter_appcenter_bundle";
 final _methodChannel = MethodChannel(_methodChannelName);
 
 class AppCenter {
   static Future startAsync({
-    @required String appSecretAndroid,
-    @required String appSecretIOS,
+    required String appSecretAndroid,
+    required String appSecretIOS,
     enableAnalytics = true,
     enableCrashes = true,
     enableDistribute = false,
@@ -48,7 +48,7 @@ class AppCenter {
 
   /// Track events
   static Future trackEventAsync(String name,
-      [Map<String, String> properties]) async {
+      [Map<String, String>? properties]) async {
     await _methodChannel.invokeMethod('trackEvent', <String, dynamic>{
       'name': name,
       'properties': properties ?? <String, String>{},

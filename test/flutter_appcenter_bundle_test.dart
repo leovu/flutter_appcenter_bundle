@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_appcenter_bundle/flutter_appcenter_bundle.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('flutter_appcenter_bundle');
@@ -15,6 +16,4 @@ void main() {
   tearDown(() {
     channel.setMockMethodCallHandler(null);
   });
-
-  test('dummy', () async {});
 }

@@ -5,15 +5,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-final _methodChannelName = "com.github.hanabi1224.flutter_appcenter_bundle";
+final _methodChannelName = "com.example.flutter_appcenter_bundle";
 final _methodChannel = MethodChannel(_methodChannelName);
 
 /// Static class that provides AppCenter APIs
 class AppCenter {
   /// Start appcenter functionalities
   static Future startAsync({
-    @required String appSecretAndroid,
-    @required String appSecretIOS,
+    required String appSecretAndroid,
+    required String appSecretIOS,
     enableAnalytics = true,
     enableCrashes = true,
     enableDistribute = false,
@@ -51,7 +51,7 @@ class AppCenter {
 
   /// Track events
   static Future trackEventAsync(String name,
-      [Map<String, String> properties]) async {
+      [Map<String, String>? properties]) async {
     await _methodChannel.invokeMethod('trackEvent', <String, dynamic>{
       'name': name,
       'properties': properties ?? <String, String>{},

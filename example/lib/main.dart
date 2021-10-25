@@ -21,10 +21,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  PackageInfo _packageInfo;
-  bool _isCrashesEnabled;
-  bool _isAnalyticsEnabled;
-  bool _isDistributeEnabled;
+  late PackageInfo _packageInfo;
+  late bool _isCrashesEnabled;
+  late bool _isAnalyticsEnabled;
+  late bool _isDistributeEnabled;
 
   @override
   void initState() {
@@ -64,22 +64,22 @@ class _MyAppState extends State<MyApp> {
             child: _packageInfo == null
                 ? RefreshProgressIndicator()
                 : Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text('App name:\n${_packageInfo.appName}'),
-                      Text(''),
-                      Text('Package name:\n${_packageInfo.packageName}'),
-                      Text(''),
-                      Text('Version:\n${_packageInfo.version}'),
-                      Text(''),
-                      Text('Build:\n${_packageInfo.buildNumber}'),
-                      Text(''),
-                      Text('IsCrashesEnabled: $_isCrashesEnabled'),
-                      Text('IsAnalyticsEnabled: $_isAnalyticsEnabled'),
-                      Text('IsDistributeEnabled: $_isDistributeEnabled'),
-                    ],
-                  )),
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('App name:\n${_packageInfo.appName}'),
+                Text(''),
+                Text('Package name:\n${_packageInfo.packageName}'),
+                Text(''),
+                Text('Version:\n${_packageInfo.version}'),
+                Text(''),
+                Text('Build:\n${_packageInfo.buildNumber}'),
+                Text(''),
+                Text('IsCrashesEnabled: $_isCrashesEnabled'),
+                Text('IsAnalyticsEnabled: $_isAnalyticsEnabled'),
+                Text('IsDistributeEnabled: $_isDistributeEnabled'),
+              ],
+            )),
       ),
     );
   }
