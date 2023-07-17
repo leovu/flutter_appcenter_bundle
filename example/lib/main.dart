@@ -6,10 +6,13 @@ import 'package:flutter_appcenter_bundle/flutter_appcenter_bundle.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppCenter.startAsync(
-    appSecretAndroid: '49361c2e-b788-4bc2-a33d-838b04b3e06b',
-    appSecretIOS: '2da3d93f-6b3f-48f9-920f-2d63ae3cd25a',
-    enableDistribute: false,
-  );
+      appSecretAndroid: '49361c2e-b788-4bc2-a33d-838b04b3e06b',
+      appSecretIOS: '2da3d93f-6b3f-48f9-920f-2d63ae3cd25a',
+      enableDistribute: false,
+      enableAnalytics: true,
+      enableCrashes: true,
+      usePrivateDistributeTrack: false,
+      disableAutomaticCheckForUpdate: false);
   await AppCenter.configureDistributeDebugAsync(enabled: false);
 
   runApp(MyApp());
@@ -64,22 +67,22 @@ class _MyAppState extends State<MyApp> {
             child: _packageInfo == null
                 ? RefreshProgressIndicator()
                 : Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text('App name:\n${_packageInfo.appName}'),
-                Text(''),
-                Text('Package name:\n${_packageInfo.packageName}'),
-                Text(''),
-                Text('Version:\n${_packageInfo.version}'),
-                Text(''),
-                Text('Build:\n${_packageInfo.buildNumber}'),
-                Text(''),
-                Text('IsCrashesEnabled: $_isCrashesEnabled'),
-                Text('IsAnalyticsEnabled: $_isAnalyticsEnabled'),
-                Text('IsDistributeEnabled: $_isDistributeEnabled'),
-              ],
-            )),
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text('App name:\n${_packageInfo.appName}'),
+                      Text(''),
+                      Text('Package name:\n${_packageInfo.packageName}'),
+                      Text(''),
+                      Text('Version:\n${_packageInfo.version}'),
+                      Text(''),
+                      Text('Build:\n${_packageInfo.buildNumber}'),
+                      Text(''),
+                      Text('IsCrashesEnabled: $_isCrashesEnabled'),
+                      Text('IsAnalyticsEnabled: $_isAnalyticsEnabled'),
+                      Text('IsDistributeEnabled: $_isDistributeEnabled'),
+                    ],
+                  )),
       ),
     );
   }
