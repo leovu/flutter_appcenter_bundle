@@ -28,7 +28,7 @@ public class SwiftFlutterAppcenterBundlePlugin: NSObject, FlutterPlugin {
                 result(FlutterError(code: "400", message:  "Bad arguments", details: "iOS could not recognize flutter arguments in method: (start)") )
                 return
             }
-
+            Analytics.enableManualSessionTracker()
             let secret = args["secret"] as! String
             let usePrivateTrack = args["usePrivateTrack"] as! Bool
             if (usePrivateTrack) {
@@ -39,6 +39,7 @@ public class SwiftFlutterAppcenterBundlePlugin: NSObject, FlutterPlugin {
                 Crashes.self,
                 Distribute.self,
             ])
+            Analytics.startSession()
         case "trackEvent":
             trackEvent(call: call, result: result)
             return

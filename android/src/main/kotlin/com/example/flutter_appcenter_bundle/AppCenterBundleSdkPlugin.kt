@@ -42,6 +42,7 @@ class AppCenterBundleSdkPlugin : FlutterPlugin, MethodCallHandler {
             return
           }
 
+          Analytics.enableManualSessionTracker()
           val appSecret = call.argument<String>("secret")
           val usePrivateTrack = call.argument<Boolean>("usePrivateTrack")
           if (usePrivateTrack == true) {
@@ -56,6 +57,7 @@ class AppCenterBundleSdkPlugin : FlutterPlugin, MethodCallHandler {
           }
           AppCenter.setLogLevel(VERBOSE)
           AppCenter.start(application, appSecret, Analytics::class.java, Crashes::class.java, Distribute::class.java)
+          Analytics.startSession()
         }
         "trackEvent" -> {
           val name = call.argument<String>("name")
